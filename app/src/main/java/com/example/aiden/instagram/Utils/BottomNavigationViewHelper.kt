@@ -3,7 +3,12 @@ package com.example.aiden.instagram.Utils
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.example.aiden.instagram.*
+import com.example.aiden.instagram.Home.HomeActivity
+import com.example.aiden.instagram.Likes.LikesActivity
+import com.example.aiden.instagram.Profile.ProfileActivity
+import com.example.aiden.instagram.R
+import com.example.aiden.instagram.Search.SearchActivity
+import com.example.aiden.instagram.Share.ShareActivity
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 
 val BOTTOM_NAVIGATION_VIEW_HELPER = BottomNavigationViewHelper()
