@@ -1,16 +1,15 @@
 package com.example.aiden.instagram.Home
 
 import android.os.Bundle
-import android.support.design.widget.TabLayout
-import android.support.v4.view.ViewPager
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.aiden.instagram.R
 import com.example.aiden.instagram.R.id.container
 import com.example.aiden.instagram.R.id.tabs
 import com.example.aiden.instagram.Utils.ACTIVINUM_HOME
 import com.example.aiden.instagram.Utils.BOTTOM_NAVIGATION_VIEW_HELPER
-import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.tabs.TabLayout
 
 class HomeActivity : AppCompatActivity() {
     private val TAG = "HomeActivity"
@@ -27,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
         adapter.addFragment(CameraFragment()) //index 0
         adapter.addFragment(HomeFragment()) //index 1
         adapter.addFragment(MessageFragment()) //index2
-        var viewPager = findViewById<ViewPager>(container)
+        var viewPager = findViewById<androidx.viewpager.widget.ViewPager>(container)
         viewPager.adapter = adapter
 
         var tabLayout = findViewById<TabLayout>(tabs)
@@ -41,7 +40,7 @@ class HomeActivity : AppCompatActivity() {
     /*BottomNavigationView setUp*/
     private fun setUpBottomNavigationView() {
         Log.d(TAG, "setUpBottomNavigationView: setupNavigationView")
-        var bottomNaviViewBar = findViewById<BottomNavigationViewEx>(R.id.bottomNavViewBar)
+        var bottomNaviViewBar = findViewById<BottomNavigationView>(R.id.bottomNavViewBar)
         BOTTOM_NAVIGATION_VIEW_HELPER.setUpBottomNavigationView(bottomNaviViewBar)
         BOTTOM_NAVIGATION_VIEW_HELPER.enableNavigation(this@HomeActivity, bottomNaviViewBar)
         bottomNaviViewBar.menu.getItem(ACTIVINUM_HOME).setChecked(true)

@@ -1,17 +1,13 @@
 package com.example.aiden.instagram.Home
 
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
-
 /*
 * Class that stores fragments for tabs
 * */
 
-class SectionsPagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm) {
+class SectionsPagerAdapter(fm: androidx.fragment.app.FragmentManager?) : androidx.fragment.app.FragmentPagerAdapter(fm) {
     private val TAG = "SectionsPagerAdapter"
-    private val mFragmentList = ArrayList<Fragment>()
-    override fun getItem(p0: Int): Fragment {
+    private val mFragmentList = ArrayList<androidx.fragment.app.Fragment>()
+    override fun getItem(p0: Int): androidx.fragment.app.Fragment {
         return mFragmentList.get(p0)
     }
 
@@ -19,7 +15,7 @@ class SectionsPagerAdapter(fm: FragmentManager?) : FragmentPagerAdapter(fm) {
         return mFragmentList.size
     }
 
-    fun addFragment(fragment: Fragment) {
+    fun addFragment(fragment: androidx.fragment.app.Fragment) {
         mFragmentList.add(fragment)
     }
 }

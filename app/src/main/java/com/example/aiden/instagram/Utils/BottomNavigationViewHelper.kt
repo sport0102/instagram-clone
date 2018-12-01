@@ -9,7 +9,7 @@ import com.example.aiden.instagram.Profile.ProfileActivity
 import com.example.aiden.instagram.R
 import com.example.aiden.instagram.Search.SearchActivity
 import com.example.aiden.instagram.Share.ShareActivity
-import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 val BOTTOM_NAVIGATION_VIEW_HELPER = BottomNavigationViewHelper()
 val ACTIVINUM_HOME = 0
@@ -20,15 +20,11 @@ val ACTIVINUM_SHARE = 2
 
 class BottomNavigationViewHelper {
     private val TAG = "BottomNavigationViewHel"
-    fun setUpBottomNavigationView(bottomNavigationViewEx: BottomNavigationViewEx) {
+    fun setUpBottomNavigationView(bottomNavigationView: BottomNavigationView) {
         Log.d(TAG, "setUpBottomNavigationView: settion up bottom navigation view")
-        bottomNavigationViewEx.enableAnimation(false)
-        bottomNavigationViewEx.enableShiftingMode(false)
-        bottomNavigationViewEx.enableItemShiftingMode(false)
-        bottomNavigationViewEx.setTextVisibility(false)
     }
 
-    fun enableNavigation(context: Context, view: BottomNavigationViewEx) {
+    fun enableNavigation(context: Context, view: BottomNavigationView) {
         Log.d(TAG, "enableNavigation: in")
         view.setOnNavigationItemSelectedListener {
             Log.d(TAG, "enableNavigation: onClick ${it.itemId}")
